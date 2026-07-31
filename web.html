@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title id="seoTitle">مطعم وكافيه العاصمة | Al Asimah Restaurant & Cafe</title>
+    <meta name="description" content="أشهى المأكولات والمشروبات في مطعم وكافيه العاصمة - غزة، شارع أبو بكر الصديق.">
+    <meta name="keywords" content="مطعم العاصمة, كافيه العاصمة, مطاعم غزة, Al Asimah Restaurant">
+    <meta name="author" content="Al Asimah Restaurant & Cafe">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="مطعم وكافيه العاصمة | Al Asimah Restaurant & Cafe">
+    <meta property="og:description" content="تجربة طعام فاخرة تجمع بين الأطباق الشرقية والغربية والمشروبات.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="restaurant">
+    
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://images.unsplash.com https://api.jsonbin.io https://maps.google.com data:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com;">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+    <!-- Embedded CSS Styles -->
+    <style>
+        :root {
+            /* Dark Theme (Default) */
+            --bg-main: #0f0f11;
+            --bg-card: rgba(26, 26, 30, 0.9);
+            --bg-nav: rgba(15, 15, 17, 0.95);
+            --bg-section-alt: #050507;
+            --text-main: #FFFFFF;
+            --text-muted: #CBD5E1;
+            --input-bg: #18181c;
+            --input-border: rgba(212, 175, 55, 0.3);
+            
+            --gold: #D4AF37;
+            --gold-hover: #AA820A;
+            --orange-dark: #CC5500;
+            --glass-border: rgba(212, 175, 55, 0.3);
+            --font-main: 'Cairo', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        /* Light Theme */
+        [data-theme="light"] {
+            --bg-main: #F8FAFC;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --bg-nav: rgba(255, 255, 255, 0.95);
+            --bg-section-alt: #EDF2F7;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --input-bg: #FFFFFF;
+            --input-border: #CBD5E1;
+            --glass-border: rgba(180, 140, 20, 0.3);
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            scroll-behavior: smooth; 
+        }
+
+        body { 
+            font-family: var(--font-main); 
+            background-color: var(--bg-main); 
+            color: var(--text-main); 
+            overflow-x: hidden; 
+            line-height: 1.6; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-main); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 12px 30px 0 rgba(212, 175, 55, 0.25);
+        }
+
+        .text-gold { color: var(--gold) !important; }
+        .text-muted { color: var(--text-muted) !important; }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+            color: #000 !important;
+            font-weight: 700;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 24px;
+            transition: var(--transition);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-gold {
+            border: 2px solid var(--gold);
+            color: var(--gold) !important;
+            font-weight: 700;
+            border-radius: 30px;
+            padding: 8px 24px;
+            transition: var(--transition);
+            background: transparent;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-outline-gold:hover {
+            background-color: var(--gold);
+            color: #000 !important;
+        }
+
+        .navbar {
+            background: var(--bg-nav);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 12px 0;
+            transition: var(--transition);
+        }
+
+        .nav-link {
+            color: var(--text-main) !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--gold) !important;
+        }
+
+        .logo {
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: var(--gold);
+            bottom: -10px;
+            right: 20%;
+            border-radius: 2px;
+        }
+
+        html[dir="ltr"] .section-title::after {
+            right: auto;
+            left: 20%;
+        }
+
+        .bg-section-alt {
+            background-color: var(--bg-section-alt);
+        }
+
+        .floating-contacts {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        html[dir="ltr"] .floating-contacts {
+            left: auto;
+            right: 20px;
+        }
+
+        .float-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .float-btn:hover { transform: scale(1.1); color: #fff; }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-phone { background-color: var(--orange-dark); }
+
+        .action-btn-circle {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .action-btn-circle:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .lang-btn {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        .lang-btn:hover { background: var(--gold); color: #000; }
+
+        .cart-trigger {
+            position: relative;
+            background: var(--gold);
+            color: #000;
+            padding: 6px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+
+        .cart-badge {
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 7px;
+            font-size: 0.75rem;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+
+        html[dir="ltr"] .cart-badge {
+            right: auto;
+            left: -5px;
+        }
+
+        .menu-filters { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; flex-wrap: wrap; }
+        .filter-btn { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--glass-border); padding: 8px 22px; border-radius: 20px; cursor: pointer; transition: var(--transition); font-weight: 600; }
+        .filter-btn.active, .filter-btn:hover { background: var(--gold); color: #000; font-weight: bold; }
+
+        .food-card { overflow: hidden; display: flex; flex-direction: column; transition: var(--transition); position: relative; height: 100%; }
+        .food-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+        .food-img-box { height: 200px; position: relative; }
+        .food-img { width: 100%; height: 100%; object-fit: cover; }
+        .food-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+
+        .admin-delete-btn { position: absolute; top: 10px; left: 10px; background: #e74c3c; color: white; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.5); z-index: 10; }
+        html[dir="ltr"] .admin-delete-btn { left: auto; right: 10px; }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 20px; }
+        .modal-card { background: var(--bg-card); border: 1px solid var(--gold); width: 100%; max-width: 650px; border-radius: 16px; max-height: 90vh; overflow-y: auto; padding: 25px; position: relative; color: var(--text-main); }
+        .modal-close { position: absolute; top: 15px; left: 15px; color: var(--text-muted); cursor: pointer; font-size: 1.4rem; }
+        html[dir="ltr"] .modal-close { left: auto; right: 15px; }
+
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 0.95rem; margin-bottom: 5px; color: var(--gold); font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 14px; background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 8px; color: var(--text-main); outline: none; }
+
+        .phone-input-group { display: flex; gap: 8px; direction: ltr; }
+        .phone-prefix-select { width: 110px !important; text-align: center; font-weight: bold; color: var(--gold) !important; cursor: pointer; }
+        .phone-number-input { flex: 1; text-align: left; }
+
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .stat-box { background: rgba(0,0,0,0.1); border: 1px solid var(--glass-border); padding: 15px; border-radius: 12px; text-align: center; }
+        .stat-value { font-size: 1.8rem; font-weight: bold; color: var(--gold); margin-top: 5px; }
+
+        .cart-item-row { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px dashed var(--glass-border); background: rgba(0,0,0,0.05); border-radius: 8px; margin-bottom: 8px; }
+
+        @media(max-width:768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <!-- Schema.org Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "مطعم وكافيه العاصمة - Al Asimah Restaurant & Cafe",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "+970599022502",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "شارع أبو بكر الصديق",
+        "addressLocality": "غزة",
+        "addressCountry": "PS"
+      },
+      "priceRange": "₪₪"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Floating Contacts -->
+    <div class="floating-contacts">
+        <a href="https://wa.me/970599022502" target="_blank" rel="noopener" class="float-btn btn-whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+970599022502" class="float-btn btn-phone" title="اتصال مباشر"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="logo d-flex align-items-center gap-2" id="logoAdminBtn">
+                <i class="fas fa-utensils text-gold fa-lg"></i>
+                <span class="fw-bold fs-4 text-gold" id="logoText">العاصمة</span>
+            </div>
+            
+            <button class="navbar-toggler text-gold border-gold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#hero" id="navHome">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" id="navServices">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu" id="navMenu">المنيو</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery" id="navGallery">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reserve" id="navReserve">حجز طاولة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" id="navContact">التواصل</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Theme Toggle Button -->
+                    <button class="action-btn-circle" id="themeToggleBtn" title="تبديل الوضع"><i class="fas fa-moon" id="themeIcon"></i></button>
+                    <!-- Language Toggle Button -->
+                    <button class="lang-btn" id="langBtn">English 🌐</button>
+                    <!-- Cart Button -->
+                    <button class="cart-trigger" id="openCartBtn">
+                        <i class="fa-solid fa-basket-shopping"></i> <span id="cartBtnText">السلة</span>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section text-center text-lg-start">
+        <div class="container pt-5">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill fw-bold" id="heroBadge">
+                        <i class="fas fa-star me-1"></i> تقييم 3.9 - تجربة لا تُنسى
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4 text-white" id="heroTitle">أشهى المأكولات والمشروبات في <span class="text-gold">مطعم وكافيه العاصمة</span></h1>
+                    <p class="lead mb-5 text-light opacity-90" id="heroSubtitle">
+                        نقدم لكم تجربة طعام مميزة تجمع بين الأطباق الشرقية والغربية، المشروبات الساخنة والباردة، والحلويات اللذيذة في أجواء راقية تناسب العائلات والأصدقاء.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#menu" class="btn btn-gold btn-lg" id="heroBtnMenu"><i class="fas fa-book-open ms-2"></i> تصفح المنيو</a>
+                        <button class="btn btn-outline-gold btn-lg" id="heroBtnOrder"><i class="fas fa-truck ms-2"></i> اطلب الآن</button>
+                        <a href="#reserve" class="btn btn-outline-light btn-lg rounded-pill px-4" id="heroBtnReserve"><i class="fas fa-chair ms-2"></i> احجز طاولة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="section-title text-gold" id="servicesTitle">خدماتنا المميزة</h2>
+                <p class="text-muted" id="servicesSub">نسعى لتقديم أفضل تجربة لكم بشتى الطرق</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-utensils fa-3x text-gold mb-3"></i>
+                        <h4 id="srv1T" class="fw-bold">تناول الطعام داخل المطعم</h4>
+                        <p class="text-muted" id="srv1D">جلسات راقية ومريحة تناسب الأفراد والعائلات مع خدمة متكاملة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-shopping-bag fa-3x text-gold mb-3"></i>
+                        <h4 id="srv2T" class="fw-bold">طلبات سفري (Take Away)</h4>
+                        <p class="text-muted" id="srv2D">احصل على وجبتك المفضلة مغلفة بإتقان وسرعة للتمتع بها في أي مكان.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-motorcycle fa-3x text-gold mb-3"></i>
+                        <h4 id="srv3T" class="fw-bold">خدمة التوصيل (Delivery)</h4>
+                        <p class="text-muted" id="srv3D">توصيل سريع يدعم للحفاظ على سخونة وجباتك ولذتها حتى باب منزلك.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-mug-hot fa-3x text-gold mb-3"></i>
+                        <h4 id="srv4T" class="fw-bold">كافيه متكامل</h4>
+                        <p class="text-muted" id="srv4D">تشكيلة فاخرة من القهوة المختصة، المشروبات الباردة والحلويات الغربية.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-users fa-3x text-gold mb-3"></i>
+                        <h4 id="srv5T" class="fw-bold">مناسب للعائلات</h4>
+                        <p class="text-muted" id="srv5D">أجواء هادئة وخصوصية تامة لتستمتع بأجمل الأوقات مع عائلتك.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-wifi fa-3x text-gold mb-3"></i>
+                        <h4 id="srv6T" class="fw-bold">واي فاي مجاني</h4>
+                        <p class="text-muted" id="srv6D">انترنت سريع مجاني لجميع الزوار طوال فترة تواجدهم.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-section-alt">
+        <div class="container py-5">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="section-title text-gold" id="menuTitle">قائمة الطعام والمشروبات</h2>
+                <p class="text-muted" id="menuSubtitle">استكشف أصنافنا الفاخرة المحضرة بكل حب</p>
+            </div>
+
+            <div class="menu-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-cat="all" id="filterAll">الكل</button>
+                <button class="filter-btn" data-cat="dishes" id="filterDishes">أهم الأطباق 🍖</button>
+                <button class="filter-btn" data-cat="drinks" id="filterDrinks">المشروبات والكافيه ☕</button>
+                <button class="filter-btn" data-cat="desserts" id="filterDesserts">الحلويات 🍰</button>
+            </div>
+
+            <div class="row g-4" id="menuGrid"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container py-5">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="section-title text-gold" id="galTitle">معرض الصور</h2>
+                <p class="text-muted" id="galSub">لمحة عن أجوائنا الفاخرة وأطباقنا الشهية</p>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-4 col-6" data-aos="zoom-in">
+                    <a href="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" class="glightbox">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&auto=format&fit=crop" class="img-fluid rounded shadow" alt="جلسات المطعم" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://images.unsplash.com/photo-1544025162-d76694265947" class="glightbox">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format&fit=crop" class="img-fluid rounded shadow" alt="أطباق فاخرة" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb" class="glightbox">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&auto=format&fit=crop" class="img-fluid rounded shadow" alt="الكافيه والقهوة" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reserve" class="py-5 bg-section-alt">
+        <div class="container py-5">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="glass-card p-4">
+                        <h3 class="text-gold mb-4 text-center" id="resTitle"><i class="fas fa-calendar-check me-2"></i> احجز طاولتك العائلية الآن</h3>
+                        <form id="tableForm">
+                            <div class="form-group">
+                                <label id="lblResName" for="tableName">الاسم الكامل:</label>
+                                <input type="text" id="tableName" placeholder="أدخل اسمك الكريم" required maxlength="50">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label id="lblResPhone" for="tablePhoneNum">رقم الهاتف للاتصال:</label>
+                                <div class="phone-input-group">
+                                    <select id="tablePhonePrefix" class="phone-prefix-select">
+                                        <option value="059">059</option>
+                                        <option value="056">056</option>
+                                    </select>
+                                    <input type="tel" id="tablePhoneNum" class="phone-number-input" placeholder="7654321" required maxlength="7">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="lblResGuests" for="tableGuests">عدد الأشخاص:</label>
+                                <select id="tableGuests">
+                                    <option value="شخصين (2)" id="optG1">شخصين (2)</option>
+                                    <option value="عائلة صغيرة (3-5)" id="optG2">عائلة صغيرة (3-5)</option>
+                                    <option value="عائلة كبيرة (6 فأكثر)" id="optG3">عائلة كبيرة (6 فأكثر)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="row g-2">
+                                <div class="col-md-6 form-group">
+                                    <label id="lblResDate" for="tableDate">التاريخ المفضل:</label>
+                                    <input type="date" id="tableDate" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label id="lblResTime" for="tableTime">الوقت المفضل:</label>
+                                    <input type="time" id="tableTime" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-2 mt-3">
+                                <button type="button" class="btn btn-gold w-100" id="btnResWASubmit"><i class="fab fa-whatsapp"></i> <span id="btnResWA">حجز عبر الواتساب</span></button>
+                                <button type="button" class="btn btn-outline-gold w-100" id="btnResSMSSubmit"><i class="fas fa-comment-sms"></i> <span id="btnResSMS">حجز عبر SMS</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-5" data-aos="fade-up">
+                    <h3 class="text-gold mb-4" id="contactTitle">معلومات التواصل والموقع</h3>
+                    <p class="mb-2" id="cntAdd"><i class="fas fa-map-marker-alt text-gold me-2"></i> شارع أبو بكر الصديق، غزة، فلسطين</p>
+                    <p class="mb-4"><i class="fas fa-phone text-gold me-2"></i> +970 599 022 502</p>
+                    
+                    <div class="d-flex flex-column gap-2 mb-4">
+                        <a href="tel:+970599022502" class="btn btn-outline-gold text-start"><i class="fas fa-phone me-2"></i> اتصال مباشر</a>
+                        <a href="https://wa.me/970599022502" target="_blank" rel="noopener" class="btn btn-outline-gold text-start"><i class="fab fa-whatsapp me-2"></i> مراسلة واتساب</a>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+                    
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top border-secondary text-center bg-section-alt">
+        <div class="container">
+            <p class="mb-1 text-gold fw-bold" id="ftrText">مطعم وكافيه العاصمة - Al Asimah Restaurant & Cafe</p>
+            <p class="text-muted small" id="ftrHours">أوقات العمل: يومياً من 9:00 صباحاً حتى 11:30 مساءً</p>
+            <p class="text-muted small mb-0">&copy; 2026 جميع الحقوق محفوظة لـ مطعم وكافيه العاصمة</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-card">
+            <i class="fa-solid fa-xmark modal-close" id="closeCartBtn"></i>
+            <h3 style="color:var(--gold); margin-bottom:15px;" id="cartModalTitle"><i class="fa-solid fa-receipt"></i> قائمة المأكولات والمشروبات المختارة</h3>
+            
+            <div id="cartItemsContainer"></div>
+
+            <div style="margin: 15px 0; border-top: 1px solid var(--glass-border); padding-top: 10px; display:flex; justify-content:space-between; font-weight:bold;">
+                <span id="cartTotalLabel">المجموع الإجمالي:</span>
+                <span style="color:var(--gold); font-size:1.2rem;" id="cartTotal">0 ₪</span>
+            </div>
+
+            <h4 style="margin: 15px 0 10px 0; color:var(--text-main);" id="cartFormTitle">تعبئة بيانات الزبون للتوصيل:</h4>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label id="lblCustName" for="custName">الاسم الكامل:</label>
+                    <input type="text" id="custName" placeholder="أدخل اسمك الكريم" required maxlength="50">
+                </div>
+                
+                <div class="form-group">
+                    <label id="lblCustPhone" for="custPhoneNum">رقم الهاتف:</label>
+                    <div class="phone-input-group">
+                        <select id="custPhonePrefix" class="phone-prefix-select">
+                            <option value="059">059</option>
+                            <option value="056">056</option>
+                        </select>
+                        <input type="tel" id="custPhoneNum" class="phone-number-input" placeholder="7654321" required maxlength="7">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label id="lblCustAddress" for="custAddress">العنوان / مكان التواجد التفصيلي:</label>
+                    <textarea id="custAddress" rows="2" placeholder="المنطقة، الشارع، ومعلم بارز..." required maxlength="200"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label id="lblOrderType" for="orderType">نوع الاستلام:</label>
+                    <select id="orderType">
+                        <option value="توصيل للمنزل 🛵" id="optDel">توصيل للمنزل 🛵</option>
+                        <option value="استلام الطلبية 🛍️" id="optPick">استلام الطلبية من المطعم 🛍️</option>
+                    </select>
+                </div>
+                
+                <div style="display:flex; gap:10px; margin-top:15px;">
+                    <button type="button" class="btn btn-gold" style="flex:1;" id="btnOrderWASubmit"><i class="fa-brands fa-whatsapp"></i> <span id="btnOrderWA">إرسال واتساب</span></button>
+                    <button type="button" class="btn btn-outline-gold" style="flex:1;" id="btnOrderSMSSubmit"><i class="fa-solid fa-comment-sms"></i> <span id="btnOrderSMS">إرسال SMS</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="modal-overlay" id="adminModal">
+        <div class="modal-card">
+            <i class="fa-solid fa-xmark modal-close" id="closeAdminBtn"></i>
+            
+            <div id="adminLogin">
+                <h3 style="color:var(--gold); text-align:center; margin-bottom:20px;">دخول إدارة المطعم 🔑</h3>
+                <div class="form-group">
+                    <label for="adminPass">كلمة المرور:</label>
+                    <input type="password" id="adminPass" placeholder="كلمة المرور">
+                </div>
+                <button class="btn btn-gold" id="loginBtn" style="width:100%;">دخول اللوحة</button>
+            </div>
+
+            <div id="adminPanel" style="display:none;">
+                <h3 style="color:var(--gold); margin-bottom:15px;"><i class="fa-solid fa-sliders"></i> لوحة الإدارة والأصناف</h3>
+
+                <div class="glass-card" style="padding:15px; margin-bottom:20px;">
+                    <h4 style="color:var(--gold); margin-bottom:12px;"><i class="fa-solid fa-chart-line"></i> إحصائيات المبيعات والأوردرات:</h4>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span style="font-size:0.85rem; color:var(--text-muted);">إجمالي عدد الأوردرات</span>
+                            <div class="stat-value" id="statOrderCount">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <span style="font-size:0.85rem; color:var(--text-muted);">إجمالي المبيعات</span>
+                            <div class="stat-value" id="statTotalRevenue">0 ₪</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-gold btn-sm" style="width:100%;" id="resetStatsBtn"><i class="fa-solid fa-rotate-right"></i> إعادة ضبط (تصفير) الإحصائيات</button>
+                </div>
+
+                <div class="glass-card" style="padding:15px; margin-bottom:20px;">
+                    <h4 style="color:var(--gold); margin-bottom:10px;"><i class="fa-solid fa-plus-circle"></i> إضافة صنف جديد للمنيو:</h4>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                        <div class="form-group"><label for="newItemName">اسم الصنف (بالعربي):</label><input type="text" id="newItemName" placeholder="برجر العاصمة" maxlength="50"></div>
+                        <div class="form-group"><label for="newItemNameEn">Item Name (English):</label><input type="text" id="newItemNameEn" placeholder="Asimah Burger" maxlength="50"></div>
+                        <div class="form-group"><label for="newItemPrice">السعر (₪):</label><input type="number" id="newItemPrice" placeholder="25" min="1" max="1000"></div>
+                        <div class="form-group">
+                            <label for="newItemCat">القسم:</label>
+                            <select id="newItemCat">
+                                <option value="dishes">أهم الأطباق 🍖</option>
+                                <option value="drinks">المشروبات والكافيه ☕</option>
+                                <option value="desserts">الحلويات 🍰</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newItemFile"><i class="fa-solid fa-image"></i> اختر صورة الصنف من الجهاز (MAX 2MB):</label>
+                        <input type="file" id="newItemFile" accept="image/png, image/jpeg, image/webp" style="padding: 5px;">
+                    </div>
+
+                    <button class="btn btn-gold btn-sm" id="addItemBtn"><i class="fa-solid fa-plus"></i> إضافة الصنف للرئيسية</button>
+                </div>
+
+                <div class="glass-card" style="padding:15px;">
+                    <h4 style="color:var(--gold); margin-bottom:10px;"><i class="fa-solid fa-key"></i> تغيير كلمة مرور لوحة الإدارة:</h4>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                        <div class="form-group">
+                            <label for="newPassInput">كلمة السر الجديدة:</label>
+                            <input type="password" id="newPassInput" placeholder="أدخل كلمة المرور الجديدة">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassInput">تأكيد كلمة السر:</label>
+                            <input type="password" id="confirmPassInput" placeholder="أعد كتابة كلمة المرور">
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-gold btn-sm" id="changePassBtn"><i class="fa-solid fa-floppy-disk"></i> حفظ كلمة المرور الجديدة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Embedded Application JavaScript Engine -->
+    <script>
+        const CONFIG = {
+            RESTAURANT_PHONE: "970599022502",
+            LICENSE_CHECK_URL: "https://api.jsonbin.io/v3/b/6a692f6df5f4af5e29ceeed0/latest",
+            MASTER_KEY: "$2a$10$LtUPGLHkm63MNH1hFXCQoeX13/6b16g7yFE/JiMmlAViPFprqnwdi"
+        };
+
+        let currentLang = localStorage.getItem('asimah_lang') || 'ar';
+        let currentTheme = localStorage.getItem('asimah_theme') || 'dark';
+        let isAdminLoggedIn = false;
+        let orderStats = JSON.parse(localStorage.getItem('asimah_order_stats')) || { count: 0, totalAmount: 0 };
+
+        const defaultMenu = [
+            { id: 1, name: "برجر كلاسيك", nameEn: "Classic Burger", price: 25, cat: "dishes", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop" },
+            { id: 2, name: "مشاوي مشكلة فاخرة", nameEn: "Mixed Grill", price: 60, cat: "dishes", img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop" },
+            { id: 3, name: "بيتزا دجاج إيطالية", nameEn: "Chicken Pizza", price: 35, cat: "dishes", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop" },
+            { id: 4, name: "إسبريسو / كابتشينو", nameEn: "Espresso / Cappuccino", price: 12, cat: "drinks", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop" },
+            { id: 5, name: "موهيتو نكهات طازج", nameEn: "Fresh Mojito", price: 15, cat: "drinks", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop" },
+            { id: 6, name: "تشيز كيك فاخر", nameEn: "Luxury Cheesecake", price: 18, cat: "desserts", img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&auto=format&fit=crop" },
+            { id: 7, name: "وافل وكريب شوكولاتة", nameEn: "Waffle & Crepe", price: 20, cat: "desserts", img: "https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=600&auto=format&fit=crop" }
+        ];
+
+        let menu = JSON.parse(localStorage.getItem('asimah_menu')) || defaultMenu;
+        let cart = [];
+
+        const translations = {
+            ar: {
+                langBtn: "English 🌐", logoText: "العاصمة",
+                navHome: "الرئيسية", navServices: "خدماتنا", navMenu: "المنيو", navGallery: "المعرض", navWhyUs: "لماذا نحن", navReserve: "حجز طاولة", navContact: "التواصل",
+                cartBtnText: "السلة",
+                heroBadge: '<i class="fas fa-star me-1"></i> تقييم 3.9 - تجربة لا تُنسى',
+                heroTitle: 'أشهى المأكولات والمشروبات في <span class="text-gold">مطعم وكافيه العاصمة</span>',
+                heroSubtitle: "نقدم لكم تجربة طعام مميزة تجمع بين الأطباق الشرقية والغربية، المشروبات الساخنة والباردة، والحلويات اللذيذة في أجواء راقية تناسب العائلات والأصدقاء.",
+                heroBtnMenu: '<i class="fas fa-book-open ms-2"></i> تصفح المنيو',
+                heroBtnOrder: '<i class="fas fa-truck ms-2"></i> اطلب الآن',
+                heroBtnReserve: '<i class="fas fa-chair ms-2"></i> احجز طاولة',
+                servicesTitle: "خدماتنا المميزة", servicesSub: "نسعى لتقديم أفضل تجربة لكم بشتى الطرق",
+                srv1T: "تناول الطعام داخل المطعم", srv1D: "جلسات راقية ومريحة تناسب الأفراد والعائلات مع خدمة متكاملة.",
+                srv2T: "طلبات سفري (Take Away)", srv2D: "احصل على وجبتك المفضلة مغلفة بإتقان وسرعة للتمتع بها في أي مكان.",
+                srv3T: "خدمة التوصيل (Delivery)", srv3D: "توصيل سريع يدعم للحفاظ على سخونة وجباتك ولذتها حتى باب منزلك.",
+                srv4T: "كافيه متكامل", srv4D: "تشكيلة فاخرة من القهوة المختصة، المشروبات الباردة والحلويات الغربية.",
+                srv5T: "مناسب للعائلات", srv5D: "أجواء هادئة وخصوصية تامة لتستمتع بأجمل الأوقات مع عائلتك.",
+                srv6T: "واي فاي مجاني", srv6D: "انترنت سريع مجاني لجميع الزوار طوال فترة تواجدهم.",
+                menuTitle: "قائمة الطعام والمشروبات", menuSubtitle: "استكشف أصنافنا الفاخرة المحضرة بكل حب",
+                filterAll: "الكل", filterDishes: "أهم الأطباق 🍖", filterDrinks: "المشروبات والكافيه ☕", filterDesserts: "الحلويات 🍰",
+                galTitle: "معرض الصور", galSub: "لمحة عن أجوائنا الفاخرة وأطباقنا الشهية",
+                resTitle: '<i class="fas fa-calendar-check me-2"></i> احجز طاولتك العائلية الآن',
+                lblResName: "الاسم الكامل:", namePlaceholder: "أدخل اسمك الكريم (الاسم الثنائي على الأقل)",
+                lblResPhone: "رقم الهاتف للاتصال:", lblResGuests: "عدد الأشخاص:",
+                optG1: "شخصين (2)", optG2: "عائلة صغيرة (3-5)", optG3: "عائلة كبيرة (6 فأكثر)",
+                lblResDate: "التاريخ المفضل:", lblResTime: "الوقت المفضل:",
+                btnResWA: "حجز عبر الواتساب", btnResSMS: "حجز عبر SMS",
+                contactTitle: "معلومات التواصل والموقع", cntAdd: '<i class="fas fa-map-marker-alt text-gold me-2"></i> شارع أبو بكر الصديق، غزة، فلسطين',
+                ftrText: "مطعم وكافيه العاصمة - Al Asimah Restaurant & Cafe", ftrHours: "أوقات العمل: يومياً من 9:00 صباحاً حتى 11:30 مساءً",
+                cartModalTitle: '<i class="fa-solid fa-receipt"></i> قائمة المأكولات والمشروبات المختارة',
+                cartTotalLabel: "المجموع الإجمالي:", cartFormTitle: "تعبئة بيانات الزبون للتوصيل:",
+                lblCustName: "الاسم الكامل:", lblCustPhone: "رقم الهاتف:", lblCustAddress: "العنوان / مكان التواجد التفصيلي:",
+                addressPlaceholder: "المنطقة، الشارع، ومعلم بارز...", lblOrderType: "نوع الاستلام:",
+                optDel: "توصيل للمنزل 🛵", optPick: "استلام الطلبية من المطعم 🛍️",
+                btnOrderWA: "إرسال واتساب", btnOrderSMS: "إرسال SMS",
+                addBtnText: '<i class="fa-solid fa-cart-plus"></i> إضافة للسلة', emptyCartText: "لم تقم بإضافة أي أصناف بعد.."
+            },
+            en: {
+                langBtn: "عربي 🌐", logoText: "Al Asimah",
+                navHome: "Home", navServices: "Services", navMenu: "Menu", navGallery: "Gallery", navWhyUs: "Why Us", navReserve: "Reservations", navContact: "Contact",
+                cartBtnText: "Cart",
+                heroBadge: '<i class="fas fa-star me-1"></i> Rating 3.9 - Unforgettable Experience',
+                heroTitle: 'Delicious Food & Drinks at <span class="text-gold">Al Asimah Restaurant & Cafe</span>',
+                heroSubtitle: "We offer a unique dining experience combining Eastern and Western dishes, hot and cold beverages, and delicious desserts in an elegant atmosphere.",
+                heroBtnMenu: '<i class="fas fa-book-open ms-2"></i> View Menu',
+                heroBtnOrder: '<i class="fas fa-truck ms-2"></i> Order Now',
+                heroBtnReserve: '<i class="fas fa-chair ms-2"></i> Reserve Table',
+                servicesTitle: "Our Premium Services", servicesSub: "Striving to provide you with the best experience",
+                srv1T: "Dine-In Experience", srv1D: "Elegant and comfortable seating for individuals and families with full service.",
+                srv2T: "Take Away Orders", srv2D: "Get your favorite meal packaged with precision and speed to enjoy anywhere.",
+                srv3T: "Delivery Service", srv3D: "Fast delivery service ensuring your food stays hot and fresh to your door.",
+                srv4T: "Full Cafe Services", srv4D: "A premium selection of specialty coffee, cold drinks, and Western desserts.",
+                srv5T: "Family Friendly", srv5D: "Quiet atmosphere and full privacy to enjoy great times with your family.",
+                srv6T: "Free Wi-Fi", srv6D: "Fast free internet for all guests throughout their visit.",
+                menuTitle: "Food & Drinks Menu", menuSubtitle: "Explore our luxurious dishes made with love",
+                filterAll: "All", filterDishes: "Main Dishes 🍖", filterDrinks: "Drinks & Cafe ☕", filterDesserts: "Desserts 🍰",
+                galTitle: "Photo Gallery", galSub: "A glimpse of our luxurious vibe and delicious dishes",
+                resTitle: '<i class="fas fa-calendar-check me-2"></i> Reserve Your Family Table Now',
+                lblResName: "Full Name:", namePlaceholder: "Enter your full name",
+                lblResPhone: "Phone Number:", lblResGuests: "Number of Guests:",
+                optG1: "2 Persons", optG2: "Small Family (3-5)", optG3: "Large Family (6+)",
+                lblResDate: "Preferred Date:", lblResTime: "Preferred Time:",
+                btnResWA: "Book via WhatsApp", btnResSMS: "Book via SMS",
+                contactTitle: "Contact Info & Location", cntAdd: '<i class="fas fa-map-marker-alt text-gold me-2"></i> Abu Bakr Al Siddiq St, Gaza, Palestine',
+                ftrText: "Al Asimah Restaurant & Cafe", ftrHours: "Opening Hours: Daily 9:00 AM - 11:30 PM",
+                cartModalTitle: '<i class="fa-solid fa-receipt"></i> Selected Items',
+                cartTotalLabel: "Total Amount:", cartFormTitle: "Delivery Customer Details:",
+                lblCustName: "Full Name:", lblCustPhone: "Phone Number:", lblCustAddress: "Detailed Address:",
+                addressPlaceholder: "Area, street, landmark...", lblOrderType: "Order Type:",
+                optDel: "Home Delivery 🛵", optPick: "Restaurant Pickup 🛍️",
+                btnOrderWA: "Send via WhatsApp", btnOrderSMS: "Send via SMS",
+                addBtnText: '<i class="fa-solid fa-cart-plus"></i> Add to Cart', emptyCartText: "Your cart is empty.."
+            }
+        };
+
+        // UI Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            initApp();
+            setupEventListeners();
+        });
+
+        function initApp() {
+            checkWebsiteStatus();
+            applyTheme();
+            applyLanguage();
+            AOS.init({ duration: 800, once: true });
+            GLightbox({ touchNavigation: true, loop: true });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
+            document.getElementById('langBtn').addEventListener('click', toggleLanguage);
+            document.getElementById('openCartBtn').addEventListener('click', openCartModal);
+            document.getElementById('heroBtnOrder').addEventListener('click', openCartModal);
+            document.getElementById('closeCartBtn').addEventListener('click', closeCartModal);
+            document.getElementById('closeAdminBtn').addEventListener('click', closeAdminModal);
+            
+            // Triple click logo to enter admin panel
+            let clickCount = 0, clickTimer;
+            document.getElementById('logoAdminBtn').addEventListener('click', () => {
+                clickCount++;
+                clearTimeout(clickTimer);
+                if (clickCount >= 3) { openAdminModal(); clickCount = 0; }
+                else { clickTimer = setTimeout(() => { clickCount = 0; }, 1000); }
+            });
+
+            // Admin Actions
+            document.getElementById('loginBtn').addEventListener('click', checkAdminPass);
+            document.getElementById('resetStatsBtn').addEventListener('click', resetStats);
+            document.getElementById('addItemBtn').addEventListener('click', addNewItem);
+            document.getElementById('changePassBtn').addEventListener('click', changeAdminPassword);
+
+            // Menu Category Filters
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => filterMenu(e.target.dataset.cat, e.target));
+            });
+
+            // Submissions
+            document.getElementById('btnOrderWASubmit').addEventListener('click', () => submitOrder('whatsapp'));
+            document.getElementById('btnOrderSMSSubmit').addEventListener('click', () => submitOrder('sms'));
+            document.getElementById('btnResWASubmit').addEventListener('click', () => sendTableReservation('whatsapp'));
+            document.getElementById('btnResSMSSubmit').addEventListener('click', () => sendTableReservation('sms'));
+        }
+
+        function toggleTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('asimah_theme', currentTheme);
+            applyTheme();
+        }
+
+        function applyTheme() {
+            const icon = document.getElementById('themeIcon');
+            if (currentTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                icon.className = 'fas fa-sun';
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                icon.className = 'fas fa-moon';
+            }
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('asimah_lang', currentLang);
+            applyLanguage();
+        }
+
+        function applyLanguage() {
+            const t = translations[currentLang];
+            const html = document.getElementById('htmlTag');
+            
+            html.setAttribute('lang', currentLang);
+            html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+
+            document.getElementById('langBtn').textContent = t.langBtn;
+            document.getElementById('logoText').textContent = t.logoText;
+            document.getElementById('navHome').textContent = t.navHome;
+            document.getElementById('navServices').textContent = t.navServices;
+            document.getElementById('navMenu').textContent = t.navMenu;
+            document.getElementById('navGallery').textContent = t.navGallery;
+            document.getElementById('navReserve').textContent = t.navReserve;
+            document.getElementById('navContact').textContent = t.navContact;
+            document.getElementById('cartBtnText').textContent = t.cartBtnText;
+
+            document.getElementById('heroBadge').innerHTML = t.heroBadge;
+            document.getElementById('heroTitle').innerHTML = t.heroTitle;
+            document.getElementById('heroSubtitle').textContent = t.heroSubtitle;
+            document.getElementById('heroBtnMenu').innerHTML = t.heroBtnMenu;
+            document.getElementById('heroBtnOrder').innerHTML = t.heroBtnOrder;
+            document.getElementById('heroBtnReserve').innerHTML = t.heroBtnReserve;
+
+            document.getElementById('servicesTitle').textContent = t.servicesTitle;
+            document.getElementById('servicesSub').textContent = t.servicesSub;
+            document.getElementById('srv1T').textContent = t.srv1T; document.getElementById('srv1D').textContent = t.srv1D;
+            document.getElementById('srv2T').textContent = t.srv2T; document.getElementById('srv2D').textContent = t.srv2D;
+            document.getElementById('srv3T').textContent = t.srv3T; document.getElementById('srv3D').textContent = t.srv3D;
+            document.getElementById('srv4T').textContent = t.srv4T; document.getElementById('srv4D').textContent = t.srv4D;
+            document.getElementById('srv5T').textContent = t.srv5T; document.getElementById('srv5D').textContent = t.srv5D;
+            document.getElementById('srv6T').textContent = t.srv6T; document.getElementById('srv6D').textContent = t.srv6D;
+
+            document.getElementById('menuTitle').textContent = t.menuTitle;
+            document.getElementById('menuSubtitle').textContent = t.menuSubtitle;
+            document.getElementById('filterAll').textContent = t.filterAll;
+            document.getElementById('filterDishes').textContent = t.filterDishes;
+            document.getElementById('filterDrinks').textContent = t.filterDrinks;
+            document.getElementById('filterDesserts').textContent = t.filterDesserts;
+
+            document.getElementById('galTitle').textContent = t.galTitle;
+            document.getElementById('galSub').textContent = t.galSub;
+
+            document.getElementById('resTitle').innerHTML = t.resTitle;
+            document.getElementById('lblResName').textContent = t.lblResName;
+            document.getElementById('tableName').placeholder = t.namePlaceholder;
+            document.getElementById('lblResPhone').textContent = t.lblResPhone;
+            document.getElementById('lblResGuests').textContent = t.lblResGuests;
+            document.getElementById('optG1').textContent = t.optG1;
+            document.getElementById('optG2').textContent = t.optG2;
+            document.getElementById('optG3').textContent = t.optG3;
+            document.getElementById('lblResDate').textContent = t.lblResDate;
+            document.getElementById('lblResTime').textContent = t.lblResTime;
+            document.getElementById('btnResWA').textContent = t.btnResWA;
+            document.getElementById('btnResSMS').textContent = t.btnResSMS;
+
+            document.getElementById('contactTitle').textContent = t.contactTitle;
+            document.getElementById('cntAdd').innerHTML = t.cntAdd;
+            document.getElementById('ftrText').textContent = t.ftrText;
+            document.getElementById('ftrHours').textContent = t.ftrHours;
+
+            document.getElementById('cartModalTitle').innerHTML = t.cartModalTitle;
+            document.getElementById('cartTotalLabel').textContent = t.cartTotalLabel;
+            document.getElementById('cartFormTitle').textContent = t.cartFormTitle;
+            document.getElementById('lblCustName').textContent = t.lblCustName;
+            document.getElementById('custName').placeholder = t.namePlaceholder;
+            document.getElementById('lblCustPhone').textContent = t.lblCustPhone;
+            document.getElementById('lblCustAddress').textContent = t.lblCustAddress;
+            document.getElementById('custAddress').placeholder = t.addressPlaceholder;
+            document.getElementById('lblOrderType').textContent = t.lblOrderType;
+            document.getElementById('optDel').textContent = t.optDel;
+            document.getElementById('optPick').textContent = t.optPick;
+            document.getElementById('btnOrderWA').textContent = t.btnOrderWA;
+            document.getElementById('btnOrderSMS').textContent = t.btnOrderSMS;
+
+            renderMenu();
+            updateCartUI();
+        }
+
+        function renderMenu() {
+            const container = document.getElementById('menuGrid');
+            container.innerHTML = '';
+            const t = translations[currentLang];
+
+            menu.forEach(item => {
+                const displayName = currentLang === 'en' ? (item.nameEn || item.name) : item.name;
+
+                const col = document.createElement('div');
+                col.className = 'col-lg-4 col-md-6 menu-item';
+                col.dataset.category = item.cat;
+
+                const card = document.createElement('div');
+                card.className = 'food-card glass-card';
+
+                const delBtn = document.createElement('button');
+                delBtn.className = 'admin-delete-btn';
+                delBtn.style.display = isAdminLoggedIn ? 'flex' : 'none';
+                delBtn.title = 'Delete';
+                delBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+                delBtn.onclick = () => deleteMenuItemOnPage(item.id);
+
+                const imgBox = document.createElement('div');
+                imgBox.className = 'food-img-box';
+                const img = document.createElement('img');
+                img.className = 'food-img';
+                img.src = item.img;
+                img.alt = displayName;
+                imgBox.appendChild(img);
+
+                const content = document.createElement('div');
+                content.className = 'food-content';
+
+                const topRow = document.createElement('div');
+                topRow.className = 'd-flex justify-content-between align-items-center mb-2';
+
+                const title = document.createElement('h5');
+                title.className = 'fw-bold mb-0';
+                title.textContent = displayName;
+
+                const price = document.createElement('span');
+                price.className = 'text-gold fw-bold';
+                price.textContent = `${item.price} ₪`;
+
+                topRow.appendChild(title);
+                topRow.appendChild(price);
+
+                const addBtn = document.createElement('button');
+                addBtn.className = 'btn btn-gold btn-sm w-100 mt-3';
+                addBtn.innerHTML = t.addBtnText;
+                addBtn.onclick = () => addToCart(item.id);
+
+                content.appendChild(topRow);
+                content.appendChild(addBtn);
+
+                card.appendChild(delBtn);
+                card.appendChild(imgBox);
+                card.appendChild(content);
+
+                col.appendChild(card);
+                container.appendChild(col);
+            });
+        }
+
+        function addToCart(itemId) {
+            const item = menu.find(i => i.id === itemId);
+            if (!item) return;
+
+            cart.push(item);
+            updateCartUI();
+            openCartModal();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cartCount').textContent = cart.length;
+            const container = document.getElementById('cartItemsContainer');
+            const totalElem = document.getElementById('cartTotal');
+            const t = translations[currentLang];
+
+            container.innerHTML = '';
+
+            if (cart.length === 0) {
+                const emptyMsg = document.createElement('p');
+                emptyMsg.style.cssText = "color:var(--text-muted); text-align:center; padding:15px;";
+                emptyMsg.textContent = t.emptyCartText;
+                container.appendChild(emptyMsg);
+                totalElem.textContent = "0 ₪";
+                return;
+            }
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const displayName = currentLang === 'en' ? (item.nameEn || item.name) : item.name;
+
+                const row = document.createElement('div');
+                row.className = 'cart-item-row';
+
+                const nameSpan = document.createElement('div');
+                nameSpan.style.cssText = "font-weight:bold; color:var(--text-main);";
+                nameSpan.textContent = `📌 ${displayName}`;
+
+                const rightBox = document.createElement('div');
+                rightBox.style.cssText = "display:flex; align-items:center; gap:15px;";
+
+                const priceSpan = document.createElement('span');
+                priceSpan.style.cssText = "color:var(--gold); font-weight:bold;";
+                priceSpan.textContent = `${item.price} ₪`;
+
+                const trashIcon = document.createElement('i');
+                trashIcon.className = "fa-solid fa-trash-can";
+                trashIcon.style.cssText = "color:#e74c3c; cursor:pointer;";
+                trashIcon.onclick = () => removeFromCart(index);
+
+                rightBox.appendChild(priceSpan);
+                rightBox.appendChild(trashIcon);
+
+                row.appendChild(nameSpan);
+                row.appendChild(rightBox);
+
+                container.appendChild(row);
+            });
+
+            totalElem.textContent = `${total} ₪`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function submitOrder(method) {
+            const name = document.getElementById('custName').value.trim();
+            const prefix = document.getElementById('custPhonePrefix').value;
+            const phoneNum = document.getElementById('custPhoneNum').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const orderType = document.getElementById('orderType').value;
+
+            if (!name || !phoneNum || !address || cart.length === 0) {
+                alert(currentLang === 'ar' ? "يرجى تعبئة كافة البيانات المطلوب!" : "Please complete all required fields!");
+                return;
+            }
+
+            const fullPhone = prefix + phoneNum;
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+            orderStats.count += 1;
+            orderStats.totalAmount += total;
+            localStorage.setItem('asimah_order_stats', JSON.stringify(orderStats));
+
+            let orderText = `*Order / طلب جديد - Al Asimah*\n---------------------------------\n👤 *Name / الاسم:* ${name}\n📞 *Phone / الهاتف:* ${fullPhone}\n📍 *Address / العنوان:* ${address}\n📦 *Type / النوع:* ${orderType}\n---------------------------------\n📋 *Items / الطلبات:*\n`;
+            
+            cart.forEach((item, i) => {
+                const nameStr = currentLang === 'en' ? (item.nameEn || item.name) : item.name;
+                orderText += `${i + 1}. ${nameStr} - ${item.price}₪\n`;
+            });
+
+            orderText += `---------------------------------\n💰 *Total / المجموع:* ${total} ₪`;
+
+            if (method === 'whatsapp') {
+                window.open(`https://wa.me/${CONFIG.RESTAURANT_PHONE}?text=${encodeURIComponent(orderText)}`, '_blank');
+            } else {
+                const plainText = orderText.replace(/\*/g, '');
+                window.open(`sms:+${CONFIG.RESTAURANT_PHONE}?body=${encodeURIComponent(plainText)}`, '_blank');
+            }
+
+            cart = [];
+            updateCartUI();
+            closeCartModal();
+        }
+
+        function sendTableReservation(method) {
+            const name = document.getElementById('tableName').value.trim();
+            const prefix = document.getElementById('tablePhonePrefix').value;
+            const phoneNum = document.getElementById('tablePhoneNum').value.trim();
+            const guests = document.getElementById('tableGuests').value;
+            const date = document.getElementById('tableDate').value;
+            const time = document.getElementById('tableTime').value;
+
+            if (!name || !phoneNum || !date || !time) {
+                alert(currentLang === 'ar' ? "يرجى تعبئة جميع الحقول!" : "Please fill out all fields!");
+                return;
+            }
+
+            const fullPhone = prefix + phoneNum;
+            let resText = `*Table Reservation / حجز طاولة*\n---------------------------------\n👤 *Name / الاسم:* ${name}\n📞 *Phone / الهاتف:* ${fullPhone}\n👥 *Guests / العدد:* ${guests}\n📅 *Date / التاريخ:* ${date}\n⏰ *Time / الوقت:* ${time}\n`;
+
+            if (method === 'whatsapp') {
+                window.open(`https://wa.me/${CONFIG.RESTAURANT_PHONE}?text=${encodeURIComponent(resText)}`, '_blank');
+            } else {
+                const plainText = resText.replace(/\*/g, '');
+                window.open(`sms:+${CONFIG.RESTAURANT_PHONE}?body=${encodeURIComponent(plainText)}`, '_blank');
+            }
+        }
+
+        async function checkAdminPass() {
+            const passInput = document.getElementById('adminPass').value;
+            const currentSavedPass = localStorage.getItem('asimah_admin_pass') || "1234";
+
+            if (passInput !== currentSavedPass) {
+                alert("كلمة المرور غير صحيحة!");
+                return;
+            }
+
+            const loginBtn = document.getElementById('loginBtn');
+            loginBtn.textContent = "جاري التحقق...";
+            loginBtn.disabled = true;
+
+            try {
+                const response = await fetch(CONFIG.LICENSE_CHECK_URL, {
+                    headers: { "X-Master-Key": CONFIG.MASTER_KEY },
+                    cache: "no-store"
+                });
+                const data = await response.json();
+
+                if (data?.record?.active === true) {
+                    isAdminLoggedIn = true;
+                    document.getElementById('adminLogin').style.display = 'none';
+                    document.getElementById('adminPanel').style.display = 'block';
+                    updateAdminStatsUI();
+                    renderMenu();
+                } else {
+                    alert("⚠️ انتهت فترة الاشتراك السنوي للوحة التحكم!");
+                }
+            } catch (error) {
+                alert("تعذر التحقق من ترخيص اللوحة.");
+            } finally {
+                loginBtn.textContent = "دخول اللوحة";
+                loginBtn.disabled = false;
+            }
+        }
+
+        function updateAdminStatsUI() {
+            document.getElementById('statOrderCount').textContent = orderStats.count;
+            document.getElementById('statTotalRevenue').textContent = `${orderStats.totalAmount} ₪`;
+        }
+
+        function resetStats() {
+            if (confirm("هل أنت تأكد من إعادة ضبط وتصفير جميع إحصائيات المبيعات والأوردرات؟")) {
+                orderStats = { count: 0, totalAmount: 0 };
+                localStorage.setItem('asimah_order_stats', JSON.stringify(orderStats));
+                updateAdminStatsUI();
+            }
+        }
+
+        function changeAdminPassword() {
+            const newPass = document.getElementById('newPassInput').value.trim();
+            const confirmPass = document.getElementById('confirmPassInput').value.trim();
+
+            if (!newPass || newPass.length < 4) { alert("كلمة المرور قصيرة!"); return; }
+            if (newPass !== confirmPass) { alert("كلمتا المرور غير متطابقتين!"); return; }
+
+            localStorage.setItem('asimah_admin_pass', newPass);
+            alert("تم تغيير كلمة المرور بنجاح!");
+            document.getElementById('newPassInput').value = '';
+            document.getElementById('confirmPassInput').value = '';
+        }
+
+        function addNewItem() {
+            const name = document.getElementById('newItemName').value.trim();
+            const nameEn = document.getElementById('newItemNameEn').value.trim() || name;
+            const price = parseFloat(document.getElementById('newItemPrice').value);
+            const cat = document.getElementById('newItemCat').value;
+            const fileInput = document.getElementById('newItemFile');
+
+            if (!name || isNaN(price) || price <= 0) {
+                alert("يرجى كتابة الاسم والسعر بوضوح!");
+                return;
+            }
+
+            const defaultImg = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80';
+
+            if (fileInput.files?.[0]) {
+                const reader = new FileReader();
+                reader.onload = (e) => saveItemToMenu(name, nameEn, price, cat, e.target.result);
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                saveItemToMenu(name, nameEn, price, cat, defaultImg);
+            }
+        }
+
+        function saveItemToMenu(name, nameEn, price, cat, imgUrl) {
+            const newItem = { id: Date.now(), name, nameEn, price, cat, img: imgUrl };
+            menu.push(newItem);
+            localStorage.setItem('asimah_menu', JSON.stringify(menu));
+            renderMenu();
+
+            alert("تمت إضافة الصنف بنجاح!");
+            document.getElementById('newItemName').value = '';
+            document.getElementById('newItemNameEn').value = '';
+            document.getElementById('newItemPrice').value = '';
+            document.getElementById('newItemFile').value = '';
+        }
+
+        function deleteMenuItemOnPage(id) {
+            if (confirm("هل أنت تأكد من حذف الصنف؟")) {
+                menu = menu.filter(item => item.id !== id);
+                localStorage.setItem('asimah_menu', JSON.stringify(menu));
+                renderMenu();
+            }
+        }
+
+        function filterMenu(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.style.display = (cat === 'all' || item.dataset.category === cat) ? 'block' : 'none';
+            });
+        }
+
+        async function checkWebsiteStatus() {
+            try {
+                const response = await fetch(CONFIG.LICENSE_CHECK_URL, {
+                    headers: { "X-Master-Key": CONFIG.MASTER_KEY },
+                    cache: "no-store"
+                });
+
+                if (!response.ok) return;
+
+                const data = await response.json();
+                if (data?.record) {
+                    const isActive = data.record.active;
+                    const expiryDateStr = data.record.expiry_date;
+                    const today = new Date();
+
+                    let isExpired = false;
+                    if (expiryDateStr && today > new Date(expiryDateStr)) {
+                        isExpired = true;
+                    }
+
+                    if (isActive === false || isExpired) {
+                        disableWholeWebsite();
+                    }
+                }
+            } catch (error) {
+                console.error("License check error:", error);
+            }
+        }
+
+        function disableWholeWebsite() {
+            document.body.innerHTML = `
+                <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; background:#0f0f11; color:#fff; text-align:center; padding:20px;">
+                    <div style="background:#18181c; padding:40px; border-radius:16px; border:1px solid rgba(212,175,55,0.3); max-width:500px;">
+                        <div style="font-size:50px; margin-bottom:20px;">⚠️</div>
+                        <h1 style="color:#e74c3c; margin-bottom:15px;">الموقع متوقف حالياً</h1>
+                        <p style="color:#a0a0a0; margin-bottom:25px;">عذراً، انتهت فترة تشغيل الخدمة لهذا الموقع. يرجى التواصل مع المطور لتجديد الاشتراك.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function openCartModal() { document.getElementById('cartModal').style.display = 'flex'; }
+        function closeCartModal() { document.getElementById('cartModal').style.display = 'none'; }
+        function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
+        function closeAdminModal() { document.getElementById('adminModal').style.display = 'none'; }
+    </script>
+</body>
+</html>
